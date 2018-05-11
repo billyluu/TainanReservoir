@@ -10,15 +10,13 @@ class ReservoirViewModel: ViewModel {
     constructor(binding: ActivityReservoirBinding) {
         this.binding = binding
         initMyAdapter(Reservoir().getData())
-
     }
 
     fun initMyAdapter(list: List<Reservoir>) {
         var myAdapter = MyAdapter(list)
-
         binding.adapter = myAdapter
-
     }
+
 
 
 }
