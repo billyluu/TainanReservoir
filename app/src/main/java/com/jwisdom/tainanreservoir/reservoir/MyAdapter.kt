@@ -15,8 +15,10 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder> {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var binding = DataBindingUtil.inflate<ActivityReservoirItemBinding>(LayoutInflater.from(parent.context), R.layout.activity_reservoir_item, parent, false)
-
+        var binding = DataBindingUtil.inflate<ActivityReservoirItemBinding>(LayoutInflater.from(parent.context),
+                                                                            R.layout.activity_reservoir_item,
+                                                                            parent,
+                                                                            false)
         return ViewHolder(binding)
     }
 
@@ -29,7 +31,7 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.ViewHolder> {
     class ViewHolder: RecyclerView.ViewHolder {
         var binding: ActivityReservoirItemBinding
             get() = field
-            set(value) { field = value}
+            set(value) { field = value }
 
         constructor(binding: ActivityReservoirItemBinding): super(binding.root) {
             this.binding = binding

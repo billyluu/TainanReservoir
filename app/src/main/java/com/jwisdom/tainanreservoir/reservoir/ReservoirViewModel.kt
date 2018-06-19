@@ -16,7 +16,4 @@ class ReservoirViewModel: ViewModel {
         var myAdapter = MyAdapter(list)
         binding.adapter = myAdapter
     }
-
-
-
 }

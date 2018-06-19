@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <data>
+        <variable
+            name="reservoirVM"
+            type="com.jwisdom.tainanreservoir.Performplace.PerformPlaceViewModel"/>
+
+        <variable
+            name="adapter"
+            type="com.jwisdom.tainanreservoir.Performplace.PerformPlaceAdapter"/>
+    </data>
+
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/perform_place_list">
+
+    </ExpandableListView>
+
+</layout>
