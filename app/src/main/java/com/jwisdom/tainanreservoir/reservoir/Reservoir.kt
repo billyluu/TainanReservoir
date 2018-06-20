@@ -1,5 +1,6 @@
 package com.jwisdom.tainanreservoir.reservoir
 
+import android.util.Log
 import com.jwisdom.tainanreservoir.async.ReservoirAsync
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -29,7 +30,6 @@ class Reservoir {
         var type = Types.newParameterizedType(List::class.java, Reservoir::class.java)
         var adapter = moshi.adapter<List<Reservoir>>(type)
         var list = adapter.fromJson(result)
-
         return list!!
     }
 }

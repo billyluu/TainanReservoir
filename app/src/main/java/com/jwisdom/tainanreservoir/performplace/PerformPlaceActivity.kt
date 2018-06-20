@@ -1,8 +1,9 @@
-package com.jwisdom.tainanreservoir.Performplace
+package com.jwisdom.tainanreservoir.performplace
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import com.jwisdom.tainanreservoir.R
 import com.jwisdom.tainanreservoir.databinding.ActivityPerformPlaceBinding
 
@@ -13,6 +14,6 @@ class PerformPlaceActivity: AppCompatActivity() {
         setContentView(R.layout.activity_perform_place)
 
         var binding = DataBindingUtil.setContentView<ActivityPerformPlaceBinding>(this, R.layout.activity_perform_place)
-        PerformPlaceViewModel(binding)
+        PerformPlaceViewModel(this, binding)
     }
 }

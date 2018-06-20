@@ -1,5 +1,6 @@
-package com.jwisdom.tainanreservoir.Performplace
+package com.jwisdom.tainanreservoir.performplace
 
+import android.util.Log
 import com.jwisdom.tainanreservoir.async.PerformPlaceAsync
 import com.jwisdom.tainanreservoir.reservoir.Reservoir
 import com.squareup.moshi.Moshi
@@ -50,8 +51,9 @@ class PerformPlace {
 
     fun getData(): List<PerformPlace>? {
         var str = PerformPlaceAsync().execute("https://cloud.culture.tw/frontsite/trans/SearchPerformPlaceAction.do?method=doFindPerformPlaceTypeJ").get()
-        var type = Types.newParameterizedType(List::class.java, Reservoir::class.java)
+        var type = Types.newParameterizedType(List::class.java, PerformPlace::class.java)
         var adapter = Moshi.Builder().build().adapter<List<PerformPlace>>(type)
+        Log.i("TAG SIZE", "${adapter.fromJson(str)!!.size}")
         return adapter.fromJson(str)
 
     }
