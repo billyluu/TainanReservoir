@@ -17,7 +17,5 @@ class PerformPlaceViewModel: ViewModel {
     private fun initAdapter() {
         var adapter = PerformPlaceAdapter(PerformPlace().getData()!!)
         binding.adapter = adapter
-
-
     }
 }
